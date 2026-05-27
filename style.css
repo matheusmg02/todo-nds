@@ -16,6 +16,7 @@
   font-size: 0.75rem;
   color: #27C498;
   text-decoration: none;
+  font-weight: 600;
 }
 
 main {
@@ -68,7 +69,7 @@ main {
   height: 38px;
   width: 100%;
   padding-left: 6px;
-  background-color: #202342;
+  background-color: #25294C;
   color: white;
   outline: none;
 }
@@ -85,4 +86,35 @@ main {
   border-radius: 4px;
   margin-top: 12px;
   cursor: pointer;
+}
+
+.logo-mobile {
+  display: none;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.link-mobile {
+  display: none;
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.75rem;
+  color: #27C498;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media(max-width: 700px) {
+  .logo-mobile,
+  .link-mobile {
+    display: block;
+  }
+
+  .header {
+    display: none;
+  }
+  
+  main {
+    height: 100vh;
+  }
 }
