@@ -13,23 +13,24 @@
 <body>
   <header class="header">
     <img src="assets/Brand.png" alt="">
-    <a href="/">Não possui uma conta?</a>
+    <a href="cadastro.html">Não possui uma conta?</a>
   </header>
   <main>
-    <form class="login-container">
+    <form id="form-login" class="form-container">
       <img class="logo-mobile" src="assets/Brand.png" alt="">
       <h2>Autenticação</h2>
 
       <label for="email">Email</label>
-      <input type="text">
+      <input type="email" name="email" id="email">
 
       <label for="senha">Senha</label>
-      <input type="text">
+      <input type="text" name="senha" id="senha">
 
       <button>Entrar</button>
 
-      <a class="link-mobile" href="/">Não possui uma conta?</a>
+      <a class="link-mobile" href="cadastro.html">Não possui uma conta?</a>
     </form>
   </main>
+  <script type="module" src="js/script.js"></script>
 </body>
 </html>
