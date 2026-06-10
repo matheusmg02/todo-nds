@@ -9,16 +9,20 @@ function handleChange({ target }) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  
-  const usuario = {
-    nome: dadosCadastro.nome,
-    email: dadosCadastro.email,
-    senha: dadosCadastro.senha
+
+  if (dadosCadastro.senha !== dadosCadastro.confirmSenha) {
+    alert("As senhas não coincidem");
+  } else {
+    const usuario = {
+      nome: dadosCadastro.nome,
+      email: dadosCadastro.email,
+      senha: dadosCadastro.senha,
+    };
+
+    usuarios.push(usuario);
+    console.log(usuarios);
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
   }
-  
-  usuarios.push(usuario);
-  console.log(usuarios);
-  localStorage.setItem("usuarios", JSON.stringify(usuarios));
 }
 
 formCadastro.addEventListener("change", handleChange);
